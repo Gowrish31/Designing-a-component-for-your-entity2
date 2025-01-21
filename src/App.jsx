@@ -6,6 +6,11 @@ import './App.css';
 import Productcard from './components/productcard.jsx';
 
 function App() {
+  const ProductData ={
+    productImage :viteLogo ,
+    productName :'nuttela' ,
+    price:'3499',
+  }
   const cards = Array.from({ length: 10 });
   const gridStyle = {
     display: 'grid',
@@ -17,7 +22,7 @@ function App() {
   return (
     <div style={gridStyle}>
       {cards.map((_, index) => (
-        <Productcard key={index} />
+        <Productcard key={index} ProductData={ProductData} />
       ))}
     </div>
   );
